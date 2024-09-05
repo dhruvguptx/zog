@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ZonedOut Gaming website</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo1">
+                <a href="./index.html">
+                    <img src="./images/logo_full.png" alt="ZOG">
+                </a>
+            </h2>
+            <div class="toggle"></div>
+        </header>
+
+        <div class="cform" action="https://formsubmit.co/zonedoutcbe@gmail.com" method="POST">
+            <form>
+                <label class="cform-label">Name</label>
+                <input type="text" name="Name" required>
+                <label class="cform-label">Mobile</label>
+                <input type="number" name="Mobile" maxlength="10" required>
+                <label class="cform-label">Email</label>
+                <input type="email" name="Email" required>
+                <label class="cform-label">Message</label>
+                <textarea name="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><img src="./images/facebook.png"></a></li>
+            <li><a href="#"><img src="./images/twitter.png"></a></li>
+            <li><a href="#"><img src="./images/instagram.png"></a></li>
+        </ul>
+        <div class="address">
+            <p>📞+91 97890 89000</p>
+            <p>📩 zonedoutcbe@gmail.com</p>
+        </div>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showcase.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>
