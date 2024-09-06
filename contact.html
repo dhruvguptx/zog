@@ -18,14 +18,14 @@
         </header>
 
         <div class="cform">
-            <form id="contactForm" action="https://formsubmit.co/a34fa32f88d5631257591e85fd3aa737" method="POST">
+            <form id="contact-form" action="https://api.github.com/repos/dhruvguptx/zog/dispatches" method="POST">
 
                 <!-- Honeypot -->
-                 <input type="text" name="_honey" style="display: none;">
+                 <!-- <input type="text" name="_honey" style="display: none;"> -->
                 <!-- Disable Captcha -->
-                 <input type="hidden" name="_captcha" value="false">
+                 <!-- <input type="hidden" name="_captcha" value="false"> -->
                 <!-- redirect on success -->
-                 <input type="hidden" name="_next" value="https://dhruvguptx.github.io/zog/thank-you.html">
+                 <!-- <input type="hidden" name="_next" value="https://dhruvguptx.github.io/zog/thank-you.html"> -->
 
                 <label class="cform-label">Name</label>
                 <input type="text" name="Name" required>
@@ -35,6 +35,10 @@
                 <input type="email" name="Email" required>
                 <label class="cform-label">Message</label>
                 <textarea name="Message" required></textarea>
+
+                <input type="hidden" name="repo" value="dhruvguptx/zog">
+                <input type="hidden" name="secret" value="s3OkfoSK6xpyP6tF43GsFJJ3">
+
                 <button type="submit">Send</button>
             </form>
         </div>
@@ -66,6 +70,36 @@
             menuToggle.classList.toggle('active');
             showcase.classList.toggle('active');
         })
+    </script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            fetch(this.action, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Authorization': 'token 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',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    event_type: 'form_submission',
+                    client_payload: {
+                        name: this.Name.value,
+                        mobile: this.mobile.value,
+                        email: this.Email.value,
+                        message: this.Message.value
+                    }
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Your message has been sent successfully!');
+                this.reset();
+            })
+            .catch(error => {
+                alert('There was an error sending your message.');
+            });
+        });
     </script>
 </body>
 </html>
