@@ -390,6 +390,27 @@ header .logo1 img {
   font-weight: 500;
 }
 
+.bold-text {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.spacer {
+  margin-bottom: 5px;
+}
+
+.blog-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 200px;
+}
+
+.blog-col .text p {
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
 /* window resizing */
 @media (max-width: 798px) or (max-height: 600px)
 {

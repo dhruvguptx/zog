@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>ZonedOut Gaming</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo1">
+                <a href="./index.html">
+                    <img src="./images/logo_full.png" alt="ZOG">
+                </a>
+            </h2>
+            <div class="toggle"></div>
+        </header>
+        
+        <div class="blog-col">
+            <div class="text">
+                <h3>PC Specs</h3>
+                <p>Motherboard - MSI B760M Bomber<br>Processor - Intel i7 12700F<br>GPU - 3070 Ti<br>Monitor - Samsung 240Hz<br>Keyboard - Razer Blackwidow V3 TKL<br>Mouse - Razer Cobra<br>Headphones - Razer Blackshark V2 X</p>
+            </div>
+            <div class="text">
+                <h3>PC Games</h3>
+                <p>Valorant<br>Call of Duty Warzone<br>Fortnite<br>Robolox<br>Cricket 24<br>Dota 2<br>Need for Speed Heat<br>F1 24<br>Assetto Corsa<br>PUBG<br>GTA V<br>Genshin Impact<br>League of Legends<br>CSGO 2<br>Apex Legends<br>Overwatch 2<br>Rocket League</p>
+            </div>
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><img src="./images/facebook.png"></a></li>
+            <li><a href="#"><img src="./images/twitter.png"></a></li>
+            <li><a href="#"><img src="./images/instagram.png"></a></li>
+        </ul>
+        <div class="address">
+            <p>📞+91 97890 89000</p>
+            <p>📩 zonedoutcbe@gmail.com</p>
+        </div>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showcase.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>
