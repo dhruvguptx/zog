@@ -39,7 +39,7 @@
                 <label class="cform-label">Message</label>
                 <textarea id="message" name="Message" required></textarea>
                 
-                <button type="submit" onclick="submitForm()">Send</button>
+                <button type="submit">Send</button> <!-- onclick="submitForm()" -->
             </form>
         </div>
 
@@ -72,13 +72,11 @@
         })
 
         function submitForm() {
-            // Get the form data
             const name = document.getElementById('name').value;
             const mobile = document.getElementById('mobile').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
-            // Create a JSON object
             const data = {
                 name: name,
                 mobile: mobile,
@@ -86,14 +84,8 @@
                 message: message
             };
 
-            console.log(data)
-            
-            // Convert the JSON object to a query string
-            // const queryString = new URLSearchParams(data).toString();
-            
-            // Redirect to the new URL with the query string
-            // window.location.href = `https://destination-url.com?${queryString}`;
-            }
+            console.log(data)            
+        }
     </script>
 </body>
 </html>
