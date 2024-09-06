@@ -86,9 +86,11 @@
                 message: message
             };
 
+            console.log(data)
+            
             // Convert the JSON object to a query string
-            const queryString = new URLSearchParams(data).toString();
-            console.log(queryString)
+            // const queryString = new URLSearchParams(data).toString();
+            
             // Redirect to the new URL with the query string
             // window.location.href = `https://destination-url.com?${queryString}`;
             }
