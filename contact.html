@@ -28,14 +28,18 @@
                  <input type="hidden" name="_next" value="https://dhruvguptx.github.io/zog/thank-you.html">
 
                 <label class="cform-label">Name</label>
-                <input type="text" name="Name" required>
+                <input type="text" id="name" name="Name" required>
+                
                 <label class="cform-label">Mobile</label>
-                <input type="text" name="Mobile" maxlength="10" required>
+                <input type="text" id="mobile" name="Mobile" maxlength="10" required>
+                
                 <label class="cform-label">Email</label>
-                <input type="email" name="Email" required>
+                <input type="email" id="email" name="Email" required>
+                
                 <label class="cform-label">Message</label>
-                <textarea name="Message" required></textarea>
-                <button type="submit">Send</button>
+                <textarea id="message" name="Message" required></textarea>
+                
+                <button type="submit" onclick="submitForm()">Send</button>
             </form>
         </div>
 
@@ -66,6 +70,28 @@
             menuToggle.classList.toggle('active');
             showcase.classList.toggle('active');
         })
+
+        function submitForm() {
+            // Get the form data
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Create a JSON object
+            const data = {
+                name: name,
+                mobile: mobile,
+                email: email,
+                message: message
+            };
+
+            // Convert the JSON object to a query string
+            const queryString = new URLSearchParams(data).toString();
+            console.log(queryString)
+            // Redirect to the new URL with the query string
+            // window.location.href = `https://destination-url.com?${queryString}`;
+            }
     </script>
 </body>
 </html>
