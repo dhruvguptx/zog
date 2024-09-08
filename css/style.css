@@ -412,7 +412,7 @@ header .logo1 img {
 }
 
 /* window resizing */
-@media (max-width: 798px) or (max-height: 600px)
+@media (max-width: 840px) or (max-height: 940px)
 {
   .showcase,
   .showcase header
