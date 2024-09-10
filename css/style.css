@@ -302,7 +302,9 @@ header .logo1 img {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  border: 1px solid #1f1f1f;
   transition: all ease 0.3s;
+
 }
 
 .blog-box:hover {
@@ -550,7 +552,7 @@ header .logo1 img {
   }
   .blog-col .text p {
     width: 200px;
-    line-height: 1.1em;
+    line-height: 1.2em;
     font-size: .9em;
   }
   #review-container {
