@@ -418,17 +418,10 @@ header .logo1 img {
 #review-container {
   position: absolute;
   top: 190px;
-  width: 90%;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 10px;
 }
 
 .review-box {
-  padding: 10px;
+  padding: 60px;
   border: 0px solid grey;
   background: #1f1f1f;
   width: 450px;
@@ -446,6 +439,7 @@ header .logo1 img {
   line-height: 1.2rem;
   color: grey;
   font-size: 1rem;
+  max-width: 850px;
 }
 
 .review-box h3 {
@@ -469,6 +463,30 @@ header .logo1 img {
   font-size: 1rem;
 }
 
+.swiper {
+  background-color: #1f1f1f;
+  width: 1000px;
+  height: 300px;
+}
+
+.swiper .swiper-button-prev, 
+.swiper .swiper-button-next {
+  color: #fff;
+}
+
+.swiper .swiper-button-prev:after, 
+.swiper .swiper-button-next:after {
+  font-size: 20px;
+}
+
+.swiper .swiper-pagination-bullet {
+  background-color: grey;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
 #map-container {
   position: absolute;
   bottom: 130px;
@@ -478,7 +496,7 @@ header .logo1 img {
 #map-container iframe {
   padding-top: 10px;
   width: 100%;
-  max-width: 910px;
+  max-width: 1000px;
   max-height: 310px;
 }
 
@@ -526,8 +544,7 @@ header .logo1 img {
   }
   .blog-col {
     grid-template-columns: 1fr;
-    gap: 0px;
-    
+    gap: 0px; 
   }
   .blog-col .text p {
     width: 200px;
@@ -535,14 +552,27 @@ header .logo1 img {
     font-size: .9em;
   }
   #review-container {
-    display: none;
+    /* display: none; */
+    width: auto;
   }
-  #map-container {
-    top: 200px;
+  .swiper {
+    width: 300px;
+  }
+  .review-box {
+    padding: 10px;
+  }
+  .review-box p{
+    line-height: 1rem;
+    font-size: .8em;
+  }
+  .swiper .swiper-button-prev,
+  .swiper .swiper-button-next,
+  .swiper .swiper-pagination {
+    display: none;
   }
   #map-container iframe {
     max-width: 300px;
-    max-height: 500px;
+    max-height: 250px;
   }
 
 }
