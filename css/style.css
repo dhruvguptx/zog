@@ -450,11 +450,12 @@ header .logo1 img {
 }
 
 .review-box h3 {
+  font-family: frost;
   padding-top: 1rem;
   padding-bottom: .2rem;
   color: white;
-  font-size: 1.2rem;
-
+  font-size: 2rem;
+  font-weight: 10;
 }
 
 .review-box h4 {
