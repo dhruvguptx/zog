@@ -519,10 +519,30 @@ header .logo1 img {
   }
   .blog-box-container {
     grid-template-columns: 1fr;
+    padding-bottom: 2em;
+  }
+  .blog-box-text h3 {
+    font-size: 1em;
+  }
+  .blog-col {
+    grid-template-columns: 1fr;
+    gap: 0px;
+    
+  }
+  .blog-col .text p {
+    width: 200px;
+    line-height: 1.1em;
+    font-size: .9em;
+  }
+  #review-container {
+    display: none;
+  }
+  #map-container {
+    top: 200px;
   }
   #map-container iframe {
     max-width: 300px;
-    max-height: 100px;
+    max-height: 500px;
   }
 
 }
