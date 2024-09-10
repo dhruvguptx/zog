@@ -417,9 +417,8 @@ header .logo1 img {
 
 #review-container {
   position: absolute;
-  top: 200px;
+  top: 190px;
   width: 90%;
-  max-height: 400px;
 }
 
 .wrapper {
@@ -446,7 +445,7 @@ header .logo1 img {
   padding: .2rem 0;
   line-height: 1.2rem;
   color: grey;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .review-box h3 {
@@ -454,7 +453,7 @@ header .logo1 img {
   padding-top: 1rem;
   padding-bottom: .2rem;
   color: white;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 10;
 }
 
@@ -467,7 +466,7 @@ header .logo1 img {
 
 .review-box .stars {
   color: orange;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 #map-container {
@@ -477,9 +476,10 @@ header .logo1 img {
 }
 
 #map-container iframe {
+  padding-top: 10px;
   width: 100%;
-  max-width: 1260px;
-  max-height: 250px;
+  max-width: 910px;
+  max-height: 310px;
 }
 
 /* window resizing */
